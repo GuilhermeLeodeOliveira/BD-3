@@ -1,0 +1,23 @@
+CREATE DATABASE aulabd1;
+create table if not exists pacientes(
+  id serial PRIMARY KEY,
+  nome varchar(40) not null,
+  sexo varchar(1),
+  obito boolean,
+  insertedAt TIMESTAMP NOT NULL DEFAULT NOW());
+create table if not exists profissionais(
+  id serial PRIMARY KEY,
+  nome varchar(50));
+create table if not exists especialidades(
+  id serial PRIMARY KEY,
+nome varchar(50));
+create table if not exists consultas(
+  id serial PRIMARY KEY,
+  
+  especialidade_id integer,
+  pac_id integer,
+  profiss_id integer);
+create table if not exists obitos(
+  id serial PRIMARY KEY,
+  obs text);
+  
