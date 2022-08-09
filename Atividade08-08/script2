@@ -1,0 +1,8 @@
+create table if not exists obitos(
+  id serial PRIMARY KEY,
+  obs text
+);
+  
+ALTER TABLE consultas ADD CONSTRAINT FKEspecialidadeDaConsulta FOREIGN KEY (especialidade_id) REFERENCES especialidades (id);
+
+ALTER TABLE consultas ADD CONSTRAINT FKProfissionalDaConsulta FOREIGN KEY (profiss_id) REFERENCES profissionais(id);
