@@ -8,14 +8,12 @@ create table if not exists pacientes(
   
 create table if not exists profissionais(
   id serial PRIMARY KEY,
-  nome varchar(50),
-  profiss_id integer  
+  nome varchar(50)
 );
 
 create table if not exists especialidades(
   id serial PRIMARY KEY,
-nome varchar(50),
-especialidade_id integer
+nome varchar(50)
 );
 
 create table if not exists consultas(
