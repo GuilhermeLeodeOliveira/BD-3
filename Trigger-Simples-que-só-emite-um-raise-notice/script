@@ -42,7 +42,7 @@ DECLARE nomeEspeci VARCHAR(100);
 
     BEGIN
 
-		IF consulta.idEspecialidade IS NULL THEN
+	IF consulta.idEspecialidade IS NULL THEN
             RAISE EXCEPTION 'a consulta precisa ter uma especialidade';
         END IF;
         
